@@ -1,0 +1,362 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* { margin:0; padding:0; }
+li { list-style:none; }
+a { text-decoration: none; color:#111;  
+    display:block;font-family: 'Noto Sans KR', sans-serif;
+}
+header, section, footer {
+    width: 100%;
+    float: left;
+}
+header, section, footer, div {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.center_box {
+    width: 1300px;
+    margin: 0 auto;
+}
+header {
+    height: 130px;
+}
+header .high_bar {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(164, 235, 248);
+
+}
+header .high_bar .right_menu {
+    float: right;
+}
+header .high_bar .right_menu ul li {
+    float: left;
+}
+header .high_bar .right_menu ul li a {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+header .high_bar .right_menu ul li a img {
+    margin-right: 10px;
+}
+header .low_bar .logo {
+    float: left;
+    width: 170px;
+    margin-top: 10px;
+}
+header .low_bar .logo img {
+    width: 100%;
+}
+header .low_bar nav {
+    float: right;
+    z-index: 11;
+    position: relative;
+    
+}
+header .low_bar nav > ul > li {
+    float: left;
+    padding: 20px 0;
+
+}
+header .low_bar nav > ul > li > a {
+    padding:10px 0;
+    margin-right: 120px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+header .low_bar nav > ul > li >a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: #c6fffc;
+    left: 50%;
+    bottom: 15px;
+    transition: all 0.5s;
+}
+header .low_bar nav > ul > li > a:hover:after {
+    width: 100%;
+    left: 0;
+}
+header .low_bar nav .sub li a {
+    padding: 18px;
+    font-size: 16px;
+    border-bottom: 3px solid rgb(211, 225, 255);
+    background-color: white;
+
+}
+header .low_bar nav > ul > li:hover > a {
+    color: #dff5fd;
+}
+header .low_bar nav > ul > li > ul  {
+    /* 서서히나타나는 애니매이션 밑에꺼랑 같이써야행 */
+
+    border-top: 3px solid #c2e7ff;    
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+header .low_bar nav > ul > li:hover > ul  {
+    opacity: 1;
+    height: auto;
+}
+section {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+section#visual {
+    padding: 0;
+    z-index: 10;
+    position: relative;
+    margin:  0 auto;
+    width: 100%;
+    text-align: center;
+}
+section#banner .movie {
+    width: 670px;
+    height: 380px;
+    margin-right: 30px;
+    float: left;
+    background-color: #111;
+}
+section#banner .banner_right {
+    width: 590px;
+    height: 380px;
+    float: left;
+}
+section#banner .banner_right ul li {
+    float: left;
+    width: 270px;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+section#banner .banner_right ul li:first-child {
+    background-image: url(../img/iru.png);
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+}
+section#banner .banner_right ul li:nth-child(2) {
+    background-image: url(../img/lira.png);
+    margin-bottom: 25px;
+}
+section#banner .banner_right ul li:nth-child(3) {
+    background-image: url(../img/ume.png);
+    margin-right: 25px;
+}
+section#banner .banner_right ul li:last-child {
+    background-image: url(../img/liu.png);
+
+}
+section#banner .banner_right ul li .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 53, 53, 0.431);
+}
+section#banner .banner_right ul li .des {
+    color: white;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+section#banner .banner_right ul li .des h3 {
+    font-size: 24px;
+    text-align: center;
+}
+section#banner .banner_right ul li .des p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+section#banner .banner_right ul li > .des > img {
+    margin: 0 auto;
+}
+section#banner .banner_right ul li h3 {
+    padding-left: 80px;
+}
+section#banner .banner_right ul li img {
+    float: right;
+}
+section#list {
+    background-image: url(../img/background.png);
+    background-attachment: fixed;
+}
+section#list h1 {
+    text-align: center;
+    font-size: 28px;
+}
+section#list .list_box {
+    margin-top: 60px;
+}
+section#list .list_box ul li {
+    float: left;
+    margin-right: 50px;
+}
+section#list .list_box ul li:last-child {
+    margin-right: 0;
+}
+section#list .list_box ul li .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+section#list .list_box ul li .photo img {
+    transform: scale(1,1);
+    transition: all 0.5s;
+}
+section#list .list_box ul li:hover .photo img{
+    transform: scale(1.1,1.1);
+}
+section#list .list_box ul li p {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #364347;
+    color: white;
+    border-radius: 15%;
+    line-height: 40px;
+    margin: 0 auto;
+}
+section#list .list_box ul li i {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    margin-top: 10px;
+}
+section#event {
+    float: left;
+}
+section#event .study {
+    width: 830px;
+    height: 550px;
+    float: left;
+    margin-right: 26px;
+}
+section#event .right_section1 {
+    width: 444px;
+    height: 262px;
+    float: left;
+    margin-bottom:24px;
+}
+section#event .right_section2 {
+    width: 444px;
+    height: 262px;
+    float: left;
+}
+section#notice {
+    float: left;
+}
+section#notice .notice1 {
+    width: 630px;
+    height: 312px;
+    float: left;
+    margin-right: 40px;
+}
+section#notice .notice2 {
+    width: 630px;
+    height: 312px;
+    float: left;
+}
+section#notice .notice1 .notice1_header {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+section#notice .notice1 .notice1_section {
+    float: left;
+    width: 100%;
+}
+section#notice .notice1 .notice1_header h1 {
+    float: left;
+}
+section#notice .notice1 .notice1_header a:last-child {
+    float: right;
+
+
+}
+section#notice .notice2 .notice2_header {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+section#notice .notice2 .notice2_section {
+    float: left;
+    width: 100%;
+}
+section#notice .notice2 .notice2_header h1 {
+    float: left;
+}
+section#notice .notice2 .notice2_header a:last-child{
+    float: right;
+}
+section#notice .notice1 .notice1_header:hover h1{
+    color: rgb(211, 225, 255);
+}
+section#notice .notice2 .notice2_header:hover h1{
+    color: rgb(211, 225, 255);
+}
+section#notice .notice1 .notice1_section ul li {
+    width: 100%;
+    padding: 20px 0px;
+    border-top: 1px solid #777;
+    padding-top: 42px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+    font-size: 20px;
+}
+section#notice .notice2 .notice2_section img {
+    border-top: 1px solid #777;
+
+}
+section#notice .notice1 .notice1_section ul li:last-child {
+    border-bottom: 1px solid #777;
+}
+section#notice .notice1 .notice1_section ul li p {
+    float: left;
+}
+section#notice .notice1 .notice1_section ul li span {
+    float: right;
+}
+footer {
+    width: 100%;
+    height: 320px;
+    background-color: rgb(164, 235, 248);
+}
+footer .footer_head {
+    float: right;
+}
+footer .footer_head ul li {
+    float: left;
+    margin-left: 30px;
+}
+footer .footer_section {
+    float: left;
+    width: 1300px;
+}
+footer .footer_section .footer_logo a{
+    float: left;
+    width: 360px;
+    height: 210px;
+}
+footer .footer_section .copyright {
+    float: left;
+}
+footer .footer_section .copyright p {
+    padding-top: 40px;
+}
